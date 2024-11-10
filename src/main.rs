@@ -3,8 +3,6 @@ extern "C" {
      fn getchar() -> u8;
 }
 
-fn gc() { getchar(); }
-
 fn cls() {
     print!("\x1B[2J\x1B[1;1H");
 }
