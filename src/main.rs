@@ -1,7 +1,9 @@
 extern "C" {
-    fn kbhit() -> bool;
-    fn getch() -> u8;
+//    fn kbhit() -> bool;
+     fn getchar() -> u8;
 }
+
+fn gc() { getchar(); }
 
 fn cls() {
     print!("\x1B[2J\x1B[1;1H");
@@ -19,12 +21,12 @@ fn main() {
     let mut arr =vec![vec!["_";w];h];
 
     let obs = "█";
-    let key = "⚿";
+    let key = "¬";
     let mut collected_key = false;
 
         loop {
-            if kbhit() {
-                c = getch() as char;
+            if /*kbhit()*/ true {
+                c = getchar() as char;
                 match c {
                     's' => { if y >= h-1 
                             || arr[y+1][x] == obs 
