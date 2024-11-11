@@ -92,13 +92,13 @@ fn main() {
                     if arr[y][x] == arr[1][28] {
                         arr[1][27] = obs;
                         println!("SECRET ENDING!!!!1!!");
-                        println!("Press Ctrl+C to quit.");
+                        println!("Press Ctrl+C or Q to quit.");
                         cls();
                     }
                     if arr[y][x] == arr[7][w-1] && collected_key == true {
                         arr[7][w-2] = obs;
                         println!("Congrats. You have beaten da game");
-                        println!("Press Ctrl+C to quit.");
+                        println!("Press Ctrl+C or Q to quit.");
                         cls();
                     }
                     
