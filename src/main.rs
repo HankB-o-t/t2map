@@ -28,23 +28,23 @@ fn main() {
                 match c {
                     's' => { if y >= h-1 
                             || arr[y+1][x] == obs 
-                            { println!("nah.") }
-                            else { y+=1; }
+                            { continue; }
+                            y+=1;
                     },
                     'w' => { if y == 0 
                             || arr[y-1][x] == obs 
-                            { println!("nah.") }
-                            else { y-=1; }
+                            { continue; }
+                            y-=1;
                     },
                     'a' => { if x == 0 
                             || arr[y][x-1] == obs 
-                            { println!("nah.") }
-                            else { x-=1; }
+                            { continue; }
+                            x-=1;
                     },
                     'd' => { if x >= w-1 
                             || arr[y][x+1] == obs 
-                            { println!("nah.") }
-                            else { x+=1; }
+                            { continue; }
+                            x+=1;
                     },
                     'q' => { break; },
                     _ => {  }
@@ -109,6 +109,7 @@ fn main() {
                 }
                 println!("");
             }
+            
             std::thread::sleep(std::time::Duration::from_millis(50));
             cls(); // clr
         }
